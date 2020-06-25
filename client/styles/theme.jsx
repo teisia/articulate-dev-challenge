@@ -13,7 +13,8 @@ export default createMuiTheme({
             dark: '#000',
             grayText: '#55585A',
             lightGrayText: '#747A7E',
-            border: '#DDD'
+            border: '#DDD',
+            heading: '#3B3F41'
         }
     },
     mq: makeMediaQuery()

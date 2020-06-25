@@ -1,5 +1,4 @@
-import React, { useState, Fragment } from 'react'
-import { observer } from 'mobx-react-lite'
+import React, { useState } from 'react'
 import isEmpty from 'lodash.isempty'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -25,7 +24,6 @@ const TabBlock = ({ title, data }) => {
                         setSelectedTab(value)
                     }}
                     indicatorColor="primary"
-                    className={classes.tabs}
                     variant="scrollable">
                         {tabLabels.map((label, index) => {
                             return <Tab
@@ -55,27 +53,23 @@ const TabBlock = ({ title, data }) => {
     )
 }
 
-export default observer(TabBlock)
+export default TabBlock
 
 const useStyles = makeStyles(theme => ({
-    mainContainer: {
-    },
     title: {
         marginBottom: '2rem',
         fontSize: '2rem',
-        color: theme.palette.common.grayText
+        fontWeight: 'bold',
+        color: theme.palette.common.heading
     },
     paper: {
         border: '1px solid ' + theme.palette.common.border,
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('sm')]: {
             maxWidth: '45em'
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
             maxWidth: '90vw'
         },
-    },
-    tabs: {
-        overflowY: 'scroll'
     },
     tab: {
         border: '.1em solid ' + theme.palette.common.border,
@@ -84,13 +78,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.secondary.main,
         color: theme.palette.common.dark,
         fontWeight: 'bold',
-        padding: '1em',
-        // [theme.breakpoints.up('md')]: {
-        //     fontSize: '.8em'
-        // },
-        // [theme.breakpoints.down('md')]: {
-        //     fontSize: '1.5em'
-        // },
+        padding: '1em'
     },
     selectedTab: {
         backgroundColor: theme.palette.primary.main,
@@ -98,21 +86,15 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.common.lightGrayText
     },
     contentContainer: {
-        padding: '3em'
+        padding: '2em 3em 3em 3em'
     },
     contentText: {
-        color: theme.palette.common.grayText,
-        // [theme.breakpoints.up('md')]: {
-        //     fontSize: '1em'
-        // },
-        //   [theme.breakpoints.down('md')]: {
-        //     fontSize: '2.2em'
-        // },
+        color: theme.palette.common.grayText
     },
     media: {
-        height: '20em',
+        height: '19em',
         width: 'auto',
-        margin: '3em 0em 2em 0em'
+        margin: '2em 0em'
     },
     loadingContainer: {
         padding: '1em'

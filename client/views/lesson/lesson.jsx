@@ -1,5 +1,4 @@
 import React from 'react'
-import { observer } from 'mobx-react-lite'
 import { makeStyles } from '@material-ui/core/styles'
 
 import Grid from '@material-ui/core/Grid'
@@ -13,12 +12,12 @@ const Lesson = () => {
 
     return (
         <Grid container className={classes.mainContainer} justify="center" alignContent="center">
-            <TabBlock title="Tab Block" data={blockData} />
+            <TabBlock title="The Beatles' Albums" data={blockData} />
         </Grid>
     )
 }
 
-export default observer(Lesson)
+export default Lesson
 
 const useStyles = makeStyles(theme => ({
     mainContainer: {
