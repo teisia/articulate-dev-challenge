@@ -2,13 +2,14 @@ import React from 'react'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/core/styles'
 
-import Theme from '../styles/theme'
+import Theme from 'styles/theme'
+import Lesson from 'views/lesson/lesson'
 
 const Main = props => {
     const classes = useStyles()
     // we can switch the content based on app state later if needed
     // if this were an app with several nested pages, id implement routes
-    let content
+    let content = <Lesson />
     return (
         <MuiThemeProvider theme={Theme}>
             <div className={classes.root}>

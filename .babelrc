@@ -12,6 +12,20 @@
             {
                 "loose": true
             }
+        ],
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "api": "./imports/api",
+                    "components": "./client/components",
+                    "styles": "./client/styles",
+                    "state": "./client/state",
+                    "views": "./client/views",
+                    "lib": "./client/lib",
+                    "server": "./server"
+                }
+            }
         ]
     ]
 }
